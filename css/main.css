@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --prime-1: hsl(31, 77%, 52%); /* Bright Orange */
+  --prime-2: hsl(184, 100%, 22%); /* Dark Cyan */
+  --prime-3: hsl(179, 100%, 13%); /* Very Dark Cyan */
+  --trans-white: hsla(0, 0%, 100%, 0.75); /* Paragraphs */
+  --light-gray: hsl(0, 0%, 95%); /* bg, h, button */
+}
+
+body {
+  height: 100vh;
+}
+
+html {
+  background-color: var(--light-gray);
+}
+
+h1 {
+  font-family: "Big Shoulders Display", cursive;
+  color: var(--light-gray);
+}
+
+p {
+  color: var(--trans-white);
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.parent {
+  display: grid;
+  width: 70vw;
+  height: 70vh;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 15vh auto 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .parent {
+    width: 80vw;
+    height: 100vh;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 10vh auto 10vh;
+  }
+}
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+@media (max-width: 767px) {
+  .container {
+    padding: 15px 25px;
+  }
+}
+.container .button {
+  /* color: transparent; */
+  background-color: var(--light-gray);
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  padding: 20px 0;
+  border-radius: 30px;
+  width: 65%;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .container .button {
+    padding: 10px 0;
+    width: 50%;
+  }
+}
+.container .button:hover {
+  background-color: transparent;
+  color: var(--light-gray);
+  border: 1px solid var(--light-gray);
+  cursor: pointer;
+}
+.sedan {
+  background-color: var(--prime-1);
+}
+.suv {
+  background-color: var(--prime-2);
+}
+.lux {
+  background-color: var(--prime-3);
+}
+.container .b1 {
+  color: var(--prime-1);
+}
+.container .b2 {
+  color: var(--prime-2);
+}
+.container .b3 {
+  color: var(--prime-3);
+}
+.attribution {
+  font-family: "Lexend Deca", sans-serif;
+  padding-top: 40px;
+}
+@media (max-width: 767px) {
+  .attribution {
+    padding: 0 0 25px;
+  }
+}
